@@ -26,6 +26,7 @@ jobs:
       # 3. 安裝依賴
       - name: 安裝依賴與讀取金鑰
         run: |
+          node app.js
           echo "npm install"
           echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
         env:
