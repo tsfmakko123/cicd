@@ -3,7 +3,7 @@ console.log("hi")
 require('dotenv').config();
 
 // 使用環境變數
-const port = process.env.PORT;
+//const port = process.env.PORT;
 // const dbHost = process.env.DB_HOST;
 
 // console.log(`App is running on port: ${port}`);
