@@ -27,7 +27,7 @@ jobs:
       # 3. 安裝依賴
       - name: 安裝依賴與讀取金鑰
         env:
-          DEPLOY_KEY: "1234"  # 透過 Secrets 使用私密金鑰
+          DEPLOY_KEY1: "1234"  # 透過 Secrets 使用私密金鑰
         run: |
           echo DEPLOY_KEY=cde >> .env
           npm install
