@@ -26,8 +26,8 @@ jobs:
       # 3. 安裝依賴
       - name: 安裝依賴與讀取金鑰
         run: |
-          echo "npm install 與 讀取env金鑰"
-          echo ${{secrets.DEPLOY_KEY}}
+          echo "npm install"
+          echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}  # 透過 Secrets 使用私密金鑰
 
