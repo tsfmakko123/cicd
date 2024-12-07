@@ -25,7 +25,9 @@ jobs:
 
       # 3. 安裝依賴
       - name: Install dependencies
-        run: echo" npm install"
+        run: |
+          echo "npm install"
+          echo ${{secrets.DEPLOY_KEY}}
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}  # 透過 Secrets 使用私密金鑰
 
