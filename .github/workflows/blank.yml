@@ -26,8 +26,9 @@ jobs:
       # 3. 安裝依賴
       - name: 安裝依賴與讀取金鑰
         run: |
-          node app.js
           echo "npm install"
+          npm install dotenv
+          node app.js
           echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}  # 透過 Secrets 使用私密金鑰
