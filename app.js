@@ -8,4 +8,4 @@ require('dotenv').config();
 
 // console.log(`App is running on port: ${port}`);
 // console.log(`Database host is: ${dbHost}`);
-consloe.log(process.env.DEPLOY_KEY;)
+//consloe.log(process.env.DEPLOY_KEY;)
