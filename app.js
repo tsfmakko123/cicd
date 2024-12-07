@@ -8,7 +8,9 @@ require('dotenv').config();
 
 // console.log(`App is running on port: ${port}`);
 // console.log(`Database host is: ${dbHost}`);
-consloe.log(process.env.DEPLOY_KEY;)
+const DEPLOY_KEY=process.env.DEPLOY_KEY
+console.log("DEPLOY_KEY:",DEPLOY_KEY);
 
 
 console.log("執行app.js結束")
+
