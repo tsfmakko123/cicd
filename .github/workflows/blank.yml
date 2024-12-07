@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - main  # 在發送 pull request 時觸發
-env:
-  DEPLOY_KEY: "abc"
+# env:
+#   DEPLOY_KEY: "abc"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,14 +26,15 @@ jobs:
 
       # 3. 安裝依賴
       - name: 安裝依賴與讀取金鑰
+        env:
+          DEPLOY_KEY: "1234"  # 透過 Secrets 使用私密金鑰
         run: |
           echo DEPLOY_KEY=cde >> .env
           npm install
           node app.js
           echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
-        env:
-          DEPLOY_KEY: "1234"  # 透過 Secrets 使用私密金鑰
-          # DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}  # 透過 Secrets 使用私密金鑰
+        
+          
 
 
 
