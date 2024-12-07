@@ -28,6 +28,7 @@ jobs:
       - name: 安裝依賴與讀取金鑰
         run: |
           echo DEPLOY_KEY=5678 >> .env
+          ls
           echo "npm install"
           npm install dotenv --save
           node app.js
