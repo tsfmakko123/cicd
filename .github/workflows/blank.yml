@@ -31,6 +31,7 @@ jobs:
           npm install dotenv --save
           node app.js
           echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
+          echo DEPLOY_KEY=5678 >> .env
         env:
           DEPLOY_KEY: "1234"  # 透過 Secrets 使用私密金鑰
           # DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}  # 透過 Secrets 使用私密金鑰
