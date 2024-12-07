@@ -24,7 +24,7 @@ jobs:
           node-version: '18'  # 設定 Node.js 版本
 
       # 3. 安裝依賴
-      - name: 安裝依賴
+      - name: 安裝依賴與讀取金鑰
         run: |
           echo "npm install 與 讀取env金鑰"
           echo ${{secrets.DEPLOY_KEY}}
