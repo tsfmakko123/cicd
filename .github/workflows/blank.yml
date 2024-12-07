@@ -32,8 +32,8 @@ jobs:
           echo DEPLOY_KEY=cde >> .env
           npm install
           node app.js
-          # echo "讀取金鑰: ${{secrets.DEPLOY_KEY}}"
-          echo "讀取金鑰: ${{env.DEPLOY_KEY}}"
+          echo "讀取github secrets: ${{secrets.DEPLOY_KEY}}"
+          echo "讀取環境變數: ${{env.DEPLOY_KEY}}"
         
           
 
